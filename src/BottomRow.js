@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import "./App.css";
 
 const BottomRow = () => {
-let qtic = 0;
-
   let [down, downnew] = useState(1);
 let [togo, togonew] = useState(10);
 let [yard, yardnew] = useState(20);
