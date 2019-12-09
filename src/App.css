@@ -5,6 +5,7 @@
 
 .scoreboard {
   width: 58%;
+  min-width:500px;
   margin: 10rem auto;
   background-color: #0b5402;
   color: white;
@@ -64,6 +65,8 @@
 }
 
 .timer {
+  width:300px;
+  min-width:300px;
   font-family: "Ozone";
   font-size: 9rem;
   padding: 2rem;
@@ -119,4 +122,18 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+}
+
+.btns{
+  background:linear-gradient(30deg, rgba(0,0,0,.5) 30%, rgba(0,220,0,.5) 50%);
+  margin:5px;
+  transition:all .4s ease-in-out;
+  transform:scale(1);
+  color:black;
+  box-shadow: var(--black) 2px 1px 10px 2px, var(--black) -5px -1px 20px -2px;;
+}
+
+.btns:hover{
+  transition:all .4s ease-in-out;
+  transform:scale(1.1);
 }
