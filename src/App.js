@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import "./App.css";
 import BottomRow, {qtic} from "./BottomRow";
  let t3 = 60;
- let t4;
+
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
@@ -13,8 +13,7 @@ function App() {
  
 const t2 = setTimeout(time); 
 const newdate = new Date().toLocaleTimeString();
-const t1 = newdate.slice(3,6) + newdate.slice(5,7) - 60;
-const timer = newdate.slice(5,7)- 60;
+
 
   return (
     <div className="container">
@@ -54,11 +53,7 @@ const timer = newdate.slice(5,7)- 60;
   );
 }
 function time(x){
-
-  t4 = t3-=.015;
-  t4 = t4.toFixed(2);
- return t4;
-  
+ return t3-=.015;
 }
 
 export default App;
