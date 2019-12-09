@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./App.css";
 
 const BottomRow = () => {
-  let [down, downnew] = useState(1);
+let [down, downnew] = useState(1);
 let [togo, togonew] = useState(10);
 let [yard, yardnew] = useState(20);
 let [quarter, quarternew] = useState(1);

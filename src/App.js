@@ -2,14 +2,16 @@
 import React, {useState} from "react";
 import "./App.css";
 import BottomRow, {qtic} from "./BottomRow";
-
+ let t3 = 60;
+ let t4;
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
   const [home, homenew] = useState(0);
   const [away, awaynew] = useState(0);
+  // const [time, timenew] = userState(60);
  
-
+const t2 = setTimeout(time); 
 const newdate = new Date().toLocaleTimeString();
 const t1 = newdate.slice(3,6) + newdate.slice(5,7) - 60;
 const timer = newdate.slice(5,7)- 60;
@@ -17,15 +19,17 @@ const timer = newdate.slice(5,7)- 60;
   return (
     <div className="container">
       <section className="scoreboard">
+      <div className="time">{newdate}</div>
         <div className="topRow">
+        
           <div className="home">
             <h2 className="home__name">Lions</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
-            <div className="time">{timer}</div>
+           
             <div className="home__score">{home}</div>
           </div>
-          <div className="timer">{timer}</div>
+          <div className="timer">{t4}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{away}</div>
@@ -49,6 +53,12 @@ const timer = newdate.slice(5,7)- 60;
     </div>
   );
 }
+function time(x){
 
+  t4 = t3-=.015;
+  t4 = t4.toFixed(2);
+ return t4;
+  
+}
 
 export default App;

@@ -137,3 +137,7 @@
   transition:all .4s ease-in-out;
   transform:scale(1.1);
 }
+
+.time{
+  margin-left:40%
+}
