@@ -6,12 +6,15 @@
 .scoreboard {
   width: 58%;
   min-width:500px;
-  margin: 10rem auto;
+  height:55vw;
+  margin: 0rem auto;
   background-color: #0b5402;
   color: white;
   border-radius: 0.5rem;
-  margin-top: 10rem;
+  
   padding: 5rem;
+  padding-bottom:0;
+  margin-bottom:0;
   border: 4px solid #aaaaaa;
 }
 
@@ -49,7 +52,7 @@
 .ballOn__title,
 .quarter__title {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 2rem;
 }
 
@@ -70,10 +73,11 @@
   font-family: "Ozone";
   font-size: 9rem;
   padding: 2rem;
-  text-align: center;
+  text-align: center; 
   background-color: var(--black);
   border: 2px solid white;
   border-radius: 6px;
+  letter-spacing: 20px;
 }
 
 .bottomRow {
@@ -110,9 +114,10 @@
 }
 
 .buttons {
-  width: 50%;
-  margin: 0 auto;
+  width: 80vw;
+ padding-left:15%;
   display: flex;
+  left:35%;
   justify-content: space-around;
 }
 
@@ -122,6 +127,7 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+ 
 }
 
 .btns{
@@ -130,7 +136,8 @@
   transition:all .4s ease-in-out;
   transform:scale(1);
   color:black;
-  box-shadow: var(--black) 2px 1px 10px 2px, var(--black) -5px -1px 20px -2px;;
+  box-shadow: var(--black) 2px 1px 10px 2px, var(--black) -5px -1px 20px -2px;
+  width:25vw;
 }
 
 .btns:hover{

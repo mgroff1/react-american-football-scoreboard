@@ -1,8 +1,8 @@
 //TODO: STEP 1 - Import the useState hook.
 import React, {useState} from "react";
 import "./App.css";
-import BottomRow from "./BottomRow";
- let t3 = 60;
+import BottomRow from "./BottomRow"; 
+ let t4 , t3 = 60;
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -16,7 +16,7 @@ const newdate = new Date().toLocaleTimeString();
 
 
   return (
-    <div className="container">
+    <div id= "hmm" className="container">
       <section className="scoreboard">
       <div className="time">{newdate}</div>
         <div className="topRow">
@@ -34,6 +34,7 @@ const newdate = new Date().toLocaleTimeString();
             <div className="away__score">{away}</div>
           </div>
         </div>
+        <button onClick={()=>{clearTimeout(t2)} } className="to btns">T/O</button>
         <BottomRow />
       </section>
       <section className="buttons">
@@ -53,7 +54,11 @@ const newdate = new Date().toLocaleTimeString();
   );
 }
 function time(x){
- return t3-=.015;
+
+ t3-=.015;
+ t4 = t3.toFixed(1);
+ t4 < 0 ? t4 = 60:t4=t4;
+ return t4;
 }
 
 export default App;
