@@ -6,15 +6,18 @@ const BottomRow = () => {
   let [togo, togonew] = useState(10);
   let [yard, yardnew] = useState(20);
   let [quarter, quarternew] = useState(1);
-
+  let holder =0;
   function qsom(quarter){
     return quarter < 4 ? quarter+1:quarter =1;
   }
 
   function ysom(yard){
-    togonew(tsom(togo))
-   yard = (Math.random().toFixed(1)*10)+ yard;
-   return yard < 100 ? yard:yard=20;
+    
+   let yardage = (Math.random().toFixed(1)*10)+ yard;
+   console.log(yardage-yard)
+   holder = yardage - yard;
+   togonew(tsom(togo))
+   return yard < 100 ? yardage:yard=20 + holder;
   //  return down < 4 ? down+1:down =1;
   }
 
@@ -23,7 +26,11 @@ const BottomRow = () => {
   }
 
   function tsom(togo){
-    return yard - togo;
+    // yard = yard - togo
+    console.log(yard);
+    let acc = holder +holder;
+    togo = togo < 0 ? togo = 10: togo; 
+    return acc >= 10 ? togo = 10: togo = togo - acc;
   }
     return (
      
