@@ -29,7 +29,7 @@ const BottomRow = () => {
      
     <div className="bottomRow">
   
-       <button className = "play" onClick={()=> downnew(dsom) + yardnew(ysom(yard)) +quarternew(qsom(quarter))}>Play</button>
+
       <div className="down">
         <h3 className="down__title">Down</h3>
         <div className="down__value">{down}</div>
@@ -38,6 +38,7 @@ const BottomRow = () => {
         <h3 className="toGo__title">To Go</h3>
         <div className="toGo__value">{togo}</div>
       </div>
+      <button className = "play" onClick={()=> downnew(dsom) + yardnew(ysom(yard)) +quarternew(qsom(quarter))}>Play</button>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
         <div className="ballOn__value">{yard}</div>
