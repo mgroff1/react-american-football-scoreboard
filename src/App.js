@@ -3,15 +3,16 @@ import React, {useState} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow"; 
  let t4 , t3 = 60;
-
+ let t2 = setInterval(time); 
+ let flag = false;
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
   const [home, homenew] = useState(0);
   const [away, awaynew] = useState(0);
   // const [time, timenew] = userState(60);
- 
-const t2 = setTimeout(time); 
+
+
 const newdate = new Date().toLocaleTimeString();
 
 
@@ -34,7 +35,7 @@ const newdate = new Date().toLocaleTimeString();
             <div className="away__score">{away}</div>
           </div>
         </div>
-        <button onClick={()=>{clearTimeout(t2)} } className="to btns">T/O</button>
+        <button onClick={()=>{flag === false ? goSome(true):goSome(false)} } className="to btns">T/O</button>
         <BottomRow />
       </section>
       <section className="buttons">
@@ -59,6 +60,13 @@ function time(x){
  t4 = t3.toFixed(1);
  t4 < 0 ? t4 = 60:t4=t4;
  return t4;
+}
+// goSome()
+function goSome(bool){
+  if(bool === true){
+  clearInterval(t2)
+  }
+  return bool = false;
 }
 
 export default App;

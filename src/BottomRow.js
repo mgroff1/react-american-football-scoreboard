@@ -12,7 +12,10 @@ const BottomRow = () => {
   }
 
   function ysom(yard){
-    return (Math.random().toFixed(1)*10)+ yard
+    togonew(tsom(togo))
+   yard = (Math.random().toFixed(1)*10)+ yard;
+   return yard < 100 ? yard:yard=20;
+  //  return down < 4 ? down+1:down =1;
   }
 
   function dsom(down){
@@ -26,7 +29,7 @@ const BottomRow = () => {
      
     <div className="bottomRow">
   
-       <button className = "play" onClick={()=> downnew(dsom) + yardnew(ysom(yard)) + togonew(tsom(togo))+quarternew(qsom(quarter))}>Play</button>
+       <button className = "play" onClick={()=> downnew(dsom) + yardnew(ysom(yard)) +quarternew(qsom(quarter))}>Play</button>
       <div className="down">
         <h3 className="down__title">Down</h3>
         <div className="down__value">{down}</div>
